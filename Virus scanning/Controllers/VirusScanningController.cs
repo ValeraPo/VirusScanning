@@ -11,7 +11,7 @@ namespace Virus_scanning.Controllers
         // api/process
         [HttpPost]
         [SwaggerOperation("Check file for viruses")]
-        public ActionResult<string> ScanFile([FromQuery] List<byte[]> file)
+        public  ActionResult<string> ScanFile([FromBody] byte[] file)
         {
             var result = "clean";
             return Ok(result);
